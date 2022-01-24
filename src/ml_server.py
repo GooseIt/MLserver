@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from ensembles import MyRandomForest, MyGradBoost
 
 import datetime
-
+from pathlib import Path
 import numpy as np
 
 import plotly
@@ -94,7 +94,9 @@ def rmse(X, y):
 
 def score_model(name):
     try:
-        model = pickle.load(open(name, "rb"))
+        path = Path("").absolute()
+        path = str(path.parent) + "/data/" + name
+        model = pickle.load(open(path, "rb"))
         global data_csv
         data_csv['date'] = data_csv['date'].values.astype(str)
         data_csv['year'] = data_csv['date'].str.slice(stop=4).astype(int)
