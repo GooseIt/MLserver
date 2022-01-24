@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greetings</title>
+</head>
+<body>
+<center><h1>Веб-сервер машинного обучения</h1></center>
+<h3>Позволяет получать предсказания стоимости недвижимости на основе ансамблей, обученных по датасету House Sales in King County, USA. Выберите одну из предложенных ниже моделей:</h3>
+<center><a href="{{ url_for('random_forest') }}">Случайный лес</a></center>
+<center><a href="{{ url_for('grad_boost') }}">Градиентный бустинг</a></center>
+<h3>Альтернативно, Вы можете создать и обучить свою собственную модель!</h3>
+<center><a href="{{ url_for('pick_your_fighter') }}">Конструктор моделей</a></center>
+<!--<center><a href="{{ url_for('get_dashboard') }}">Про</a></center>-->
+</body>
+</html>

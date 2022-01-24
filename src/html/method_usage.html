@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data testing</title>
+</head>
+{% extends "base.html" %}
+{% block content %}
+<a href="https://www.kaggle.com/harlfoxem/housesalesprediction/download">Для обучения модели загрузите файл с раcширением .csv, соотвествующий по формату данному файлу</a>
+<div class="container">
+      {{ wtf.quick_form(form) }}
+</div>
+<a href="{{ url_for('index') }}">Назад</a>
+{% endblock %}
