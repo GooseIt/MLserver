@@ -5,13 +5,14 @@
     <title>Constructor</title>
 </head>
 <body>
-<center><h1>Конструктор модели</h1></center>
+<center><h1>Результат обучения модели</h1></center>
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
       {{ wtf.quick_form(form) }}
 </div>
 <h3>{{ score }}</h3>
+<center><a href="{{ url_for('pick_your_fighter') }}">Обучить еще одну модель</a></center>
 </body>
 </html>
 {% endblock %}
